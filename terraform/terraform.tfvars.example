@@ -1,0 +1,5 @@
+# Copy this file to terraform.tfvars and adjust the values:
+#   cp terraform.tfvars.example terraform.tfvars
+
+aws_region   = "us-east-1"
+project_name = "devops-challenge1-rep1"

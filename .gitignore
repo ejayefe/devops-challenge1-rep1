@@ -1,1 +1,6 @@
+# Repo-wide rules (no leading slash, so they match in every folder)
 node_modules/
+npm-debug.log*
+.env
+*.pem
+.DS_Store
