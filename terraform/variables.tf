@@ -9,3 +9,14 @@ variable "project_name" {
   type        = string
   default     = "devops-challenge1-rep1"
 }
+variable "github_repository" {
+  description = "GitHub repo allowed to deploy, as owner/name"
+  type        = string
+  default     = "ejayefe/devops-challenge1-rep1"
+}
+
+variable "github_branch" {
+  description = "Branch allowed to assume the deploy role"
+  type        = string
+  default     = "gitops"
+}
