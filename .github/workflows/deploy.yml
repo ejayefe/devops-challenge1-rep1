@@ -104,3 +104,4 @@ jobs:
           cluster: ${{ env.ECS_CLUSTER }}
           service: ${{ env.FRONTEND_SERVICE }}
           wait-for-service-stability: true
+# trigger
