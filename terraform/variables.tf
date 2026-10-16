@@ -20,3 +20,14 @@ variable "github_branch" {
   type        = string
   default     = "gitops"
 }
+variable "github_owner_id" {
+  description = "Numeric GitHub ID of the repo owner (from the OIDC token subject)"
+  type        = string
+  default     = "5231335"
+}
+
+variable "github_repository_id" {
+  description = "Numeric GitHub ID of the repo (from the OIDC token subject)"
+  type        = string
+  default     = "1419890451"
+}

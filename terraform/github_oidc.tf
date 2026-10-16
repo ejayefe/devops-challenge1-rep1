@@ -26,11 +26,16 @@ resource "aws_iam_role" "github_deploy" {
       Condition = {
         StringEquals = {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          "token.actions.githubusercontent.com:sub" = "repo:${var.github_repository}:ref:refs/heads/${var.github_branch}"
+          "token.actions.githubusercontent.com:sub" = "repo:${local.github_owner}@${var.github_owner_id}/${local.github_repo_name}@${var.github_repository_id}:ref:refs/heads/${var.github_branch}"
         }
       }
     }]
   })
+}
+
+locals {
+  github_owner     = split("/", var.github_repository)[0]
+  github_repo_name = split("/", var.github_repository)[1]
 }
 
 # Least privilege: push to these two repos, register task definitions,
